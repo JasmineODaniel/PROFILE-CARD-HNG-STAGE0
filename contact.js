@@ -168,13 +168,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset the form fields
             contactForm.reset();
             
-            // Optional: Hide success message after 5 seconds
-            setTimeout(function() {
-                successMessage.classList.add('hidden');
-            }, 5000);
-            
+           // Optional: Fade out before hiding after 5 seconds
+setTimeout(function() {
+    successMessage.style.transition = 'opacity 1s ease';
+    successMessage.style.opacity = '0';
+    setTimeout(function() {
+        successMessage.classList.add('hidden');
+        successMessage.style.opacity = ''; // reset for next time
+    }, 1000);
+}, 5000);
+
         } else {
-            // Validation failed - find the first error and focus on it
             // This helps with accessibility and user experience
             if (!isNameValid) {
                 fullNameInput.focus();
