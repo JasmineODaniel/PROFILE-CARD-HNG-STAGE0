@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Jasmine Daniel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-card">
+            <header class="page-header">
+                <h1 class="page-title">Contact Me</h1>
+                <p class="page-subtitle">Get in touch and let's connect</p>
+            </header>
+
+            <div id="successMessage" class="success-message hidden" data-testid="test-contact-success" role="alert" aria-live="polite">
+                <svg class="success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                    <h3>Message sent successfully!</h3>
+                    <p>Thank you for reaching out. I'll get back to you soon.</p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        class="form-input"
+                        data-testid="test-contact-name"
+                        aria-required="true"
+                        aria-describedby="errorName"
+                        required
+                    >
+                    <span id="errorName" class="error-message" data-testid="test-contact-error-name" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input"
+                        data-testid="test-contact-email"
+                        aria-required="true"
+                        aria-describedby="errorEmail"
+                        required
+                    >
+                    <span id="errorEmail" class="error-message" data-testid="test-contact-error-email" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        class="form-input"
+                        data-testid="test-contact-subject"
+                        aria-required="true"
+                        aria-describedby="errorSubject"
+                        required
+                    >
+                    <span id="errorSubject" class="error-message" data-testid="test-contact-error-subject" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message <span class="required">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="6" 
+                        class="form-input form-textarea"
+                        data-testid="test-contact-message"
+                        aria-required="true"
+                        aria-describedby="errorMessage"
+                        required
+                    ></textarea>
+                    <span id="errorMessage" class="error-message" data-testid="test-contact-error-message" role="alert"></span>
+                </div>
+
+                <button type="submit" class="submit-button" data-testid="test-contact-submit">
+                    <span class="button-text">Send Message</span>
+                    <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </article>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

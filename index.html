@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Card - Frontend Wizards Stage 0</title>
+    <title>Jasmine Daniel - Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
     <main class="container">
         <article class="profile-card" data-testid="test-profile-card">
             <header class="profile-header">
                 <figure class="avatar-container">
                     <img 
                         src="Jasgirl.jpg" 
-                        alt="User profile avatar" 
+                        alt="Jasmine Daniel profile picture" 
                         class="avatar"
                         data-testid="test-user-avatar"
                     >
@@ -21,9 +32,9 @@
                 </figure>
                 
                 <div class="profile-info">
-                    <h1 class="user-name" data-testid="test-user-name"> JASMINE DANIEL</h1>
+                    <h1 class="user-name" data-testid="test-user-name">JASMINE DANIEL</h1>
                     <p class="user-bio" data-testid="test-user-bio">
-                       I’m Jasmine, a Frontend Engineer who blends UI and UX to craft meaningful digital experiences.
+                       I'm Jasmine, a Frontend Engineer who blends UI and UX to craft meaningful digital experiences.
                     </p>
                     <div class="timestamp">
                         <span class="label">Current Time (ms):</span>
@@ -76,8 +87,7 @@
                     <li>Coding and building websites</li>
                     <li>Swimming</li>
                     <li>Connecting and Networking</li>
-                    <li>Traveling
-</li>
+                    <li>Traveling</li>
                     <li>Listening to Music</li>
                 </ul>
             </section>
@@ -85,13 +95,10 @@
             <section class="dislikes-section">
                 <h2 class="section-title">Dislikes</h2>
                 <ul class="interest-list" data-testid="test-user-dislikes">
-                    <li>
-                        Pretense
-                    </li>
+                    <li>Pretense</li>
                     <li>Slow Network</li>
                     <li>Negativity</li>
-                    <li>Presssure to 
-                        Conform</li>
+                    <li>Pressure to Conform</li>
                 </ul>
             </section>
         </article>
