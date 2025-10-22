@@ -1,7 +1,4 @@
-// This file handles form validation for the contact form
-// It validates all required fields and displays appropriate error messages
 
-// Wait for the DOM to be fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function() {
     
     // Get references to the form and all input elements
@@ -110,15 +107,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
     
-    // Add real-time validation on blur (when user leaves the field)
-    // This provides immediate feedback to the user
     fullNameInput.addEventListener('blur', validateName);
     emailInput.addEventListener('blur', validateEmail);
     subjectInput.addEventListener('blur', validateSubject);
     messageInput.addEventListener('blur', validateMessage);
     
-    // Add real-time validation on input (as user types)
-    // This clears error messages as soon as the user starts fixing them
+   
     fullNameInput.addEventListener('input', function() {
         if (this.value.trim() !== '') {
             validateName();
@@ -141,17 +135,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (this.value.trim() !== '') {
             validateMessage();
         }
-    });
+    });  
     
     // Handle form submission
     contactForm.addEventListener('submit', function(event) {
         // Prevent the default form submission behavior
-        event.preventDefault();
+        event.preventDefault(); 
         
-        // Hide the success message if it was showing from a previous submission
-        successMessage.classList.add('hidden');
-        
-        // Validate all fields
+   
+       successMessage.classList.add('hidden');
+
+        // Validate all fields 
         const isNameValid = validateName();
         const isEmailValid = validateEmail();
         const isSubjectValid = validateSubject();
@@ -159,27 +153,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Check if all fields are valid
         if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-            // All validation passed - show success message
+           
             successMessage.classList.remove('hidden');
             
-            // Scroll to the success message so user can see it
+           
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             
-            // Reset the form fields
+
             contactForm.reset();
             
-           // Optional: Fade out before hiding after 5 seconds
+         
 setTimeout(function() {
     successMessage.style.transition = 'opacity 1s ease';
     successMessage.style.opacity = '0';
-    setTimeout(function() {
+    setTimeout(function() {''
         successMessage.classList.add('hidden');
         successMessage.style.opacity = ''; // reset for next time
     }, 1000);
 }, 5000);
 
         } else {
-            // This helps with accessibility and user experience
+           
             if (!isNameValid) {
                 fullNameInput.focus();
             } else if (!isEmailValid) {
