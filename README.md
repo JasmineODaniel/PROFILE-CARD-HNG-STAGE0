@@ -201,8 +201,8 @@ python -m http.server 8000
 ## Project Status
 
  Status: Completed Stage 1  
- Last Updated: October 21, 2025  
- Ready for deployment
+ Last Updated: October 22, 2025  
+ Deployed
 
 ## Submission Checklist
 
@@ -224,3 +224,4 @@ python -m http.server 8000
 - GitHub: [@JasmineODaniel](https://github.com/JasmineODaniel)
 - Instagram: [@theneverdone](https://www.instagram.com/theneverdone?igsh=YzlleGdvZ3dnYjNl)
 - Email: jasminedaniel046@gmail.com
+
